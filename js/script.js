@@ -15,9 +15,20 @@ const access = prompt('inserisci la tua mail');
 
 console.table(mailAddress);
 
-if (access === mailAddress){
-    console.log('Benvenuto');
+let flag = false;
+
+for(let i=0; i<mailAddress.length ; i++){
+    if( access===mailAddress[i]){
+        flag=true;
+    }
+
 }
-else if (access !== mailAddress){
-    console.log('Spiacenti');
+
+if (flag==true){
+    console.log('benvenuto')
 }
+
+else {
+    console.log ('spiacenti')
+}
+
